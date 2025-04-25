@@ -82,4 +82,4 @@ const estudianteService = {
     }
 }
 
-module.exports = estudianteService;
+module.exports = estudianteService; 

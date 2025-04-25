@@ -5,5 +5,7 @@ const ruta = express.Router();
 
 ruta.get('/',estudianteController.getAllEstudiantes);
 ruta.post('/',estudianteController.addEstudiante);
+ruta.get('/:id',estudianteController.getEstudianteById);
+ruta.put('/:id',estudianteController.updateEstudiante);
 
 module.exports = ruta;
