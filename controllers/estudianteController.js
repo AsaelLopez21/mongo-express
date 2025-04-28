@@ -33,6 +33,14 @@ const estudianteController = {
         try {
           const {id} = req.params;
           const data = await studentService.getEstudianteById(id);  
+
+            if(data === null){
+                return res.send({
+                    msg:"no se encontro: "+id,
+                    data:[]
+                })
+            }
+
           return res.send(data);
         } catch (error) {
             return res.send({
@@ -57,6 +65,20 @@ const estudianteController = {
                 msg:error,
                 data:[]
             })
+        }
+    },
+    deleteEstudiante: async (req, res) => {
+        try {
+            const data = await studentService.deleteEstudiante(req.params.id);
+            return res.send({
+                msg: null,
+                data
+            });
+        } catch (error) {
+            return res.send({
+                msg: error,
+                data: []
+            });
         }
     }
 };

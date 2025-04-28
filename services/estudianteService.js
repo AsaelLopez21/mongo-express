@@ -21,7 +21,7 @@ const estudianteService = {
         try {
             const data = await Estudiante.findById(id);
             return{
-                msg:null,
+                msg:"no se encontro: "+id,
                 data
             }
         } catch(err) {

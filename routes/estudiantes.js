@@ -7,5 +7,6 @@ ruta.get('/',estudianteController.getAllEstudiantes);
 ruta.post('/',estudianteController.addEstudiante);
 ruta.get('/:id',estudianteController.getEstudianteById);
 ruta.put('/:id',estudianteController.updateEstudiante);
+ruta.delete('/:id',estudianteController.deleteEstudiante);
 
 module.exports = ruta;
